@@ -251,12 +251,12 @@ public:
 
     iterator find(K const & k) {
         auto const it = gate.find(k);
-        return it != gate.end() ? std::next(*it) : end();
+        return it != gate.end() ? *it : end();
     }
 
     const_iterator find(K const & k) const {
         auto const it = gate.find(k);
-        return it != gate.end() ? std::next(*it) : end();
+        return it != gate.end() ? *it : end();
     }
 
     value & front() {
